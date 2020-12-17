@@ -1,3 +1,4 @@
+<?php include 'dischi.php' ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -13,12 +14,15 @@
             <section>
                 <div class="container">
                     <div class="card-container">
-                        <div class="music-card">
-                            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg">
-                            <h3 class="album">disc.title</h3>
-                            <h4 class="artist">disc.author</h4>
-                            <p class="year">disc.year</p>
-                        </div>
+                        <?php foreach ($dischi as $disco) { ?>
+                            <div class="music-card">
+                                <img src="<?php echo $disco['poster'] ?>">
+                                <h3 class="album"><?php echo $disco['title']  ?></h3>
+                                <h4 class="artist"><?php echo $disco['author'] ?></h4>
+                                <p class="year"><?php echo $disco['year'] ?></p>
+                            </div>
+                            <?php
+                        } ?>
                     </div>
                 </div>
             </section>

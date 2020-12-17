@@ -11,14 +11,13 @@ main {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  height: calc(100vh - 80px);
-  border: 1px solid white;
+  min-height: calc(100vh - 80px);
 }
 
 header {
   height: 80px;
   background-color: black;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
 }
@@ -30,8 +29,9 @@ header {
 
 .music-card {
   width: 234px;
-  height: 250px;
+  padding: 30px 0;
   border: 1px solid black;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,5 +47,6 @@ header {
 
 .music-card .album {
   margin: 10px 0;
+  text-align: center;
 }
 

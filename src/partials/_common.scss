@@ -11,6 +11,5 @@ main {
 .container {
     max-width: 1170px;
     margin: 0 auto;
-    height: calc(100vh - 80px);
-    border: 1px solid white;
+    min-height: calc(100vh - 80px);
 }
