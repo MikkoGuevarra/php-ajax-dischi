@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music-card {
+    width: 234px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2);
+    img {
+        width: 150px;
+    }
+    .album {
+        margin: 10px 0;
+    }
+}

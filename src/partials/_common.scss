@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #292b2d;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    height: calc(100vh - 80px);
+    border: 1px solid white;
+}

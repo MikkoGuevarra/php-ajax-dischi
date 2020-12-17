@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #292b2d;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+  border: 1px solid white;
+}
+
+header {
+  height: 80px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.music-card {
+  width: 234px;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.music-card img {
+  width: 150px;
+}
+
+.music-card .album {
+  margin: 10px 0;
+}
+
