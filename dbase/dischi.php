@@ -73,4 +73,43 @@ $dischi = [
     ]
 ];
 
+
+$genres = [];
+foreach ($dischi as $disco) {
+
+    $genre = $disco['genre'];
+    if (!in_array($genre, $genres)) {
+        $genres[] = $genre;
+    }
+}
+
+
+if ( !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' )
+{
+    //verifico se ce paramatro GET
+    if (!empty($_GET) && !empty($_GET['genre'])) {
+        //recupero parametro get 'genre'
+        $genre = $_GET['genre'];
+
+        $filteredDischi = [];
+
+        //filter  in base al genre
+        //ciclo i i dischi
+        foreach ($dischi as $disco) {
+            //per ogni disco, check if is equal to selectedGenre
+            if ($disco['genre'] ==  $genre) {
+                //if yyes then push
+                $filteredDischi[] = $disco;
+            }
+        }
+
+    } else {
+        //no params or il genre è vuoto
+        $filteredDischi = $dischi;
+
+    }
+    header('Content-Type: application/json');
+    echo json_encode($filteredDischi);
+}
+
 ?>
